@@ -1,0 +1,4 @@
+[build.environment]
+  # Keep secrets scanning enabled, but omit non-sensitive config values
+  # that can appear frequently in compiled output and source maps.
+  SECRETS_SCAN_OMIT_KEYS = "PORT,DB_PATH,MONGODB_DB_NAME"
