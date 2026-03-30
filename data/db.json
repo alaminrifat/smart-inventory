@@ -1,0 +1,775 @@
+{
+  "users": [
+    {
+      "id": "user_demo",
+      "name": "Demo User",
+      "email": "demo@example.com",
+      "passwordHash": "$2b$10$2LpOmEDH/FLXryYriCuGKeDb5lSlnnlE5A2CmxvLWEhpNe9K0oG8e",
+      "role": "admin",
+      "createdAt": "2026-01-01T00:00:00.000Z"
+    },
+    {
+      "id": "user_admin",
+      "name": "Admin",
+      "email": "admin@example.com",
+      "passwordHash": "$2b$10$MXrG7KEi5nmw9nOfGb/7SuB49MXVQcOB5.6rLR.t5JptKsUuftrKO",
+      "role": "admin",
+      "createdAt": "2026-01-01T00:00:00.000Z"
+    }
+  ],
+  "categories": [
+    {
+      "id": "cat_electronics",
+      "name": "Electronics",
+      "createdAt": "2026-01-01T00:00:00.000Z"
+    },
+    {
+      "id": "cat_clothing",
+      "name": "Clothing",
+      "createdAt": "2026-01-01T00:00:00.000Z"
+    },
+    {
+      "id": "cat_grocery",
+      "name": "Grocery",
+      "createdAt": "2026-01-01T00:00:00.000Z"
+    },
+    {
+      "id": "cat_furniture",
+      "name": "Furniture",
+      "createdAt": "2026-01-01T00:00:00.000Z"
+    }
+  ],
+  "products": [
+    {
+      "id": "prod_iphone",
+      "name": "iPhone 13",
+      "categoryId": "cat_electronics",
+      "price": 799.99,
+      "stockQuantity": 3,
+      "minStockThreshold": 5,
+      "status": "active",
+      "createdAt": "2026-01-10T00:00:00.000Z",
+      "updatedAt": "2026-01-10T00:00:00.000Z"
+    },
+    {
+      "id": "prod_headphone",
+      "name": "Headphone Pro",
+      "categoryId": "cat_electronics",
+      "price": 149.99,
+      "stockQuantity": 2,
+      "minStockThreshold": 10,
+      "status": "active",
+      "createdAt": "2026-01-10T00:00:00.000Z",
+      "updatedAt": "2026-01-10T00:00:00.000Z"
+    },
+    {
+      "id": "prod_tshirt",
+      "name": "T-Shirt",
+      "categoryId": "cat_clothing",
+      "price": 19.99,
+      "stockQuantity": 20,
+      "minStockThreshold": 5,
+      "status": "active",
+      "createdAt": "2026-01-10T00:00:00.000Z",
+      "updatedAt": "2026-01-10T00:00:00.000Z"
+    },
+    {
+      "id": "prod_jeans",
+      "name": "Denim Jeans",
+      "categoryId": "cat_clothing",
+      "price": 49.99,
+      "stockQuantity": 15,
+      "minStockThreshold": 5,
+      "status": "active",
+      "createdAt": "2026-01-10T00:00:00.000Z",
+      "updatedAt": "2026-01-10T00:00:00.000Z"
+    },
+    {
+      "id": "prod_rice",
+      "name": "Basmati Rice 5kg",
+      "categoryId": "cat_grocery",
+      "price": 12.99,
+      "stockQuantity": 0,
+      "minStockThreshold": 10,
+      "status": "out_of_stock",
+      "createdAt": "2026-01-10T00:00:00.000Z",
+      "updatedAt": "2026-01-10T00:00:00.000Z"
+    },
+    {
+      "id": "prod_chair",
+      "name": "Office Chair",
+      "categoryId": "cat_furniture",
+      "price": 249.99,
+      "stockQuantity": 8,
+      "minStockThreshold": 3,
+      "status": "active",
+      "createdAt": "2026-01-10T00:00:00.000Z",
+      "updatedAt": "2026-01-10T00:00:00.000Z"
+    },
+    {
+      "id": "prod_demo_1774852381202_0_ds4hj",
+      "name": "Wireless Mouse X2",
+      "categoryId": "cat_electronics",
+      "price": 151.7,
+      "stockQuantity": 26,
+      "minStockThreshold": 7,
+      "status": "active",
+      "createdAt": "2026-03-30T06:33:01.201Z",
+      "updatedAt": "2026-03-30T06:33:01.201Z"
+    },
+    {
+      "id": "prod_demo_1774852381202_1_1s4xt",
+      "name": "Gaming Keyboard TKL",
+      "categoryId": "cat_clothing",
+      "price": 72.65,
+      "stockQuantity": 14,
+      "minStockThreshold": 5,
+      "status": "active",
+      "createdAt": "2026-03-30T06:33:01.202Z",
+      "updatedAt": "2026-03-30T06:33:01.202Z"
+    },
+    {
+      "id": "prod_demo_1774852381202_2_yaub0",
+      "name": "Bluetooth Speaker Mini",
+      "categoryId": "cat_grocery",
+      "price": 207.89,
+      "stockQuantity": 3,
+      "minStockThreshold": 11,
+      "status": "active",
+      "createdAt": "2026-03-30T06:33:01.202Z",
+      "updatedAt": "2026-03-30T06:33:01.202Z"
+    },
+    {
+      "id": "prod_demo_1774852381202_3_xuspp",
+      "name": "LED Desk Lamp Pro",
+      "categoryId": "cat_furniture",
+      "price": 74.03,
+      "stockQuantity": 19,
+      "minStockThreshold": 9,
+      "status": "active",
+      "createdAt": "2026-03-30T06:33:01.202Z",
+      "updatedAt": "2026-03-30T06:33:01.202Z"
+    },
+    {
+      "id": "prod_demo_1774852381202_4_8jhzg",
+      "name": "Stainless Water Bottle",
+      "categoryId": "cat_electronics",
+      "price": 280.99,
+      "stockQuantity": 17,
+      "minStockThreshold": 8,
+      "status": "active",
+      "createdAt": "2026-03-30T06:33:01.202Z",
+      "updatedAt": "2026-03-30T06:33:01.202Z"
+    },
+    {
+      "id": "prod_demo_1774852381202_5_wu3a4",
+      "name": "Organic Coffee Beans",
+      "categoryId": "cat_clothing",
+      "price": 20.62,
+      "stockQuantity": 25,
+      "minStockThreshold": 6,
+      "status": "active",
+      "createdAt": "2026-03-30T06:33:01.202Z",
+      "updatedAt": "2026-03-30T06:33:01.202Z"
+    },
+    {
+      "id": "prod_demo_1774852381202_6_ab8nm",
+      "name": "Yoga Mat Premium",
+      "categoryId": "cat_grocery",
+      "price": 105.24,
+      "stockQuantity": 4,
+      "minStockThreshold": 8,
+      "status": "active",
+      "createdAt": "2026-03-30T06:33:01.202Z",
+      "updatedAt": "2026-03-30T06:33:01.202Z"
+    },
+    {
+      "id": "prod_demo_1774852381202_7_6c4vi",
+      "name": "Smart Watch Fit",
+      "categoryId": "cat_furniture",
+      "price": 163.72,
+      "stockQuantity": 2,
+      "minStockThreshold": 4,
+      "status": "active",
+      "createdAt": "2026-03-30T06:33:01.202Z",
+      "updatedAt": "2026-03-30T06:33:01.202Z"
+    },
+    {
+      "id": "prod_demo_1774852381202_8_jk1uj",
+      "name": "Backpack Urban 25L",
+      "categoryId": "cat_electronics",
+      "price": 211.49,
+      "stockQuantity": 33,
+      "minStockThreshold": 7,
+      "status": "active",
+      "createdAt": "2026-03-30T06:33:01.202Z",
+      "updatedAt": "2026-03-30T06:33:01.202Z"
+    },
+    {
+      "id": "prod_demo_1774852381202_9_q03ra",
+      "name": "Noise Cancelling Earbuds",
+      "categoryId": "cat_clothing",
+      "price": 298.88,
+      "stockQuantity": 12,
+      "minStockThreshold": 5,
+      "status": "active",
+      "createdAt": "2026-03-30T06:33:01.202Z",
+      "updatedAt": "2026-03-30T06:33:01.202Z"
+    }
+  ],
+  "orders": [
+    {
+      "id": "ord_001",
+      "orderNumber": "ORD-1001",
+      "customerName": "Alice Johnson",
+      "items": [
+        {
+          "productId": "prod_tshirt",
+          "productName": "T-Shirt",
+          "quantity": 2,
+          "unitPrice": 19.99,
+          "subtotal": 39.98
+        },
+        {
+          "productId": "prod_jeans",
+          "productName": "Denim Jeans",
+          "quantity": 1,
+          "unitPrice": 49.99,
+          "subtotal": 49.99
+        }
+      ],
+      "totalPrice": 89.97,
+      "status": "delivered",
+      "createdAt": "2026-03-22T09:00:00.000Z",
+      "updatedAt": "2026-03-24T12:00:00.000Z"
+    },
+    {
+      "id": "ord_002",
+      "orderNumber": "ORD-1002",
+      "customerName": "Bob Smith",
+      "items": [
+        {
+          "productId": "prod_iphone",
+          "productName": "iPhone 13",
+          "quantity": 1,
+          "unitPrice": 799.99,
+          "subtotal": 799.99
+        }
+      ],
+      "totalPrice": 799.99,
+      "status": "shipped",
+      "createdAt": "2026-03-25T10:30:00.000Z",
+      "updatedAt": "2026-03-26T08:00:00.000Z"
+    },
+    {
+      "id": "ord_003",
+      "orderNumber": "ORD-1003",
+      "customerName": "Carol White",
+      "items": [
+        {
+          "productId": "prod_headphone",
+          "productName": "Headphone Pro",
+          "quantity": 1,
+          "unitPrice": 149.99,
+          "subtotal": 149.99
+        },
+        {
+          "productId": "prod_chair",
+          "productName": "Office Chair",
+          "quantity": 1,
+          "unitPrice": 249.99,
+          "subtotal": 249.99
+        }
+      ],
+      "totalPrice": 399.98,
+      "status": "confirmed",
+      "createdAt": "2026-03-28T14:00:00.000Z",
+      "updatedAt": "2026-03-28T14:00:00.000Z"
+    },
+    {
+      "id": "ord_004",
+      "orderNumber": "ORD-1004",
+      "customerName": "David Lee",
+      "items": [
+        {
+          "productId": "prod_tshirt",
+          "productName": "T-Shirt",
+          "quantity": 3,
+          "unitPrice": 19.99,
+          "subtotal": 59.97
+        }
+      ],
+      "totalPrice": 59.97,
+      "status": "pending",
+      "createdAt": "2026-03-29T08:00:00.000Z",
+      "updatedAt": "2026-03-29T08:00:00.000Z"
+    }
+  ],
+  "restockQueue": [
+    {
+      "id": "prod_iphone",
+      "productId": "prod_iphone",
+      "productName": "iPhone 13",
+      "currentStock": 3,
+      "minThreshold": 5,
+      "priority": "high",
+      "addedAt": "2026-03-20T00:00:00.000Z"
+    },
+    {
+      "id": "prod_headphone",
+      "productId": "prod_headphone",
+      "productName": "Headphone Pro",
+      "currentStock": 2,
+      "minThreshold": 10,
+      "priority": "high",
+      "addedAt": "2026-03-20T00:00:00.000Z"
+    },
+    {
+      "id": "prod_rice",
+      "productId": "prod_rice",
+      "productName": "Basmati Rice 5kg",
+      "currentStock": 0,
+      "minThreshold": 10,
+      "priority": "high",
+      "addedAt": "2026-03-20T00:00:00.000Z"
+    },
+    {
+      "id": "prod_demo_1774852381202_2_yaub0",
+      "productId": "prod_demo_1774852381202_2_yaub0",
+      "productName": "Bluetooth Speaker Mini",
+      "currentStock": 3,
+      "minThreshold": 11,
+      "priority": "medium",
+      "addedAt": "2026-03-30T06:33:01.202Z"
+    },
+    {
+      "id": "prod_demo_1774852381202_6_ab8nm",
+      "productId": "prod_demo_1774852381202_6_ab8nm",
+      "productName": "Yoga Mat Premium",
+      "currentStock": 4,
+      "minThreshold": 8,
+      "priority": "medium",
+      "addedAt": "2026-03-30T06:33:01.202Z"
+    },
+    {
+      "id": "prod_demo_1774852381202_7_6c4vi",
+      "productId": "prod_demo_1774852381202_7_6c4vi",
+      "productName": "Smart Watch Fit",
+      "currentStock": 2,
+      "minThreshold": 4,
+      "priority": "medium",
+      "addedAt": "2026-03-30T06:33:01.202Z"
+    }
+  ],
+  "activityLogs": [
+    {
+      "id": "log_demo_1774852635622_39_b667",
+      "action": "restock_queue_removed",
+      "description": "Product \"Denim Jeans\" removed from Restock Queue",
+      "userId": "user_demo",
+      "createdAt": "2026-03-28T15:37:15.622Z"
+    },
+    {
+      "id": "log_demo_1774852635622_38_8m49",
+      "action": "product_deleted",
+      "description": "Product \"iPhone 13\" deleted",
+      "userId": "user_demo",
+      "createdAt": "2026-03-28T16:37:15.622Z"
+    },
+    {
+      "id": "log_demo_1774852635622_37_zyi9",
+      "action": "order_created",
+      "description": "Order ORD-1001 created for Alice Johnson",
+      "userId": "user_demo",
+      "createdAt": "2026-03-28T17:37:15.622Z"
+    },
+    {
+      "id": "log_demo_1774852635622_36_mfpk",
+      "action": "restock_queue_removed",
+      "description": "Product \"Wireless Mouse X2\" removed from Restock Queue",
+      "userId": "user_demo",
+      "createdAt": "2026-03-28T18:37:15.622Z"
+    },
+    {
+      "id": "log_demo_1774852635622_35_m30c",
+      "action": "restock_queue_removed",
+      "description": "Product \"Office Chair\" removed from Restock Queue",
+      "userId": "user_demo",
+      "createdAt": "2026-03-28T19:37:15.622Z"
+    },
+    {
+      "id": "log_demo_1774852635622_34_mqgn",
+      "action": "stock_updated",
+      "description": "Stock updated for \"Headphone Pro\"",
+      "userId": "user_demo",
+      "createdAt": "2026-03-28T20:37:15.622Z"
+    },
+    {
+      "id": "log_demo_1774852635622_33_xzxo",
+      "action": "product_restocked",
+      "description": "Product \"Denim Jeans\" was restocked",
+      "userId": "user_demo",
+      "createdAt": "2026-03-28T21:37:15.622Z"
+    },
+    {
+      "id": "log_demo_1774852635622_32_6xfn",
+      "action": "order_status_updated",
+      "description": "Order ORD-1001 marked as Shipped",
+      "userId": "user_demo",
+      "createdAt": "2026-03-28T22:37:15.622Z"
+    },
+    {
+      "id": "log_demo_1774852635622_31_b4ag",
+      "action": "stock_updated",
+      "description": "Stock updated for \"Office Chair\"",
+      "userId": "user_demo",
+      "createdAt": "2026-03-28T23:37:15.622Z"
+    },
+    {
+      "id": "log_demo_1774852635622_30_sfiu",
+      "action": "restock_queue_added",
+      "description": "Product \"Office Chair\" added to Restock Queue",
+      "userId": "user_demo",
+      "createdAt": "2026-03-29T00:37:15.622Z"
+    },
+    {
+      "id": "log_demo_1774852635622_29_d83r",
+      "action": "category_deleted",
+      "description": "Category \"Furniture\" deleted",
+      "userId": "user_demo",
+      "createdAt": "2026-03-29T01:37:15.622Z"
+    },
+    {
+      "id": "log_demo_1774852635622_28_frtt",
+      "action": "product_created",
+      "description": "Product \"Yoga Mat Premium\" created",
+      "userId": "user_demo",
+      "createdAt": "2026-03-29T02:37:15.622Z"
+    },
+    {
+      "id": "log_demo_1774852635622_27_jt34",
+      "action": "stock_updated",
+      "description": "Stock updated for \"Yoga Mat Premium\"",
+      "userId": "user_demo",
+      "createdAt": "2026-03-29T03:37:15.622Z"
+    },
+    {
+      "id": "log_demo_1774852635622_26_hjdu",
+      "action": "product_created",
+      "description": "Product \"Noise Cancelling Earbuds\" created",
+      "userId": "user_demo",
+      "createdAt": "2026-03-29T04:37:15.622Z"
+    },
+    {
+      "id": "log_demo_1774852635622_25_gfjd",
+      "action": "product_created",
+      "description": "Product \"T-Shirt\" created",
+      "userId": "user_demo",
+      "createdAt": "2026-03-29T05:37:15.622Z"
+    },
+    {
+      "id": "log_demo_1774852635622_24_p8qj",
+      "action": "product_restocked",
+      "description": "Product \"Yoga Mat Premium\" was restocked",
+      "userId": "user_demo",
+      "createdAt": "2026-03-29T06:37:15.622Z"
+    },
+    {
+      "id": "log_demo_1774852635622_23_l9h5",
+      "action": "order_status_updated",
+      "description": "Order ORD-1004 marked as Shipped",
+      "userId": "user_demo",
+      "createdAt": "2026-03-29T07:37:15.622Z"
+    },
+    {
+      "id": "log_demo_1774852635622_22_9bmg",
+      "action": "order_cancelled",
+      "description": "Order ORD-1003 cancelled by demo workflow",
+      "userId": "user_demo",
+      "createdAt": "2026-03-29T08:37:15.622Z"
+    },
+    {
+      "id": "log_demo_1774852635622_21_bf1h",
+      "action": "product_created",
+      "description": "Product \"Headphone Pro\" created",
+      "userId": "user_demo",
+      "createdAt": "2026-03-29T09:37:15.622Z"
+    },
+    {
+      "id": "log_demo_1774852635622_20_bafz",
+      "action": "category_created",
+      "description": "Category \"Electronics\" created",
+      "userId": "user_demo",
+      "createdAt": "2026-03-29T10:37:15.622Z"
+    },
+    {
+      "id": "log_demo_1774852635622_19_ek39",
+      "action": "category_created",
+      "description": "Category \"Furniture\" created",
+      "userId": "user_demo",
+      "createdAt": "2026-03-29T11:37:15.622Z"
+    },
+    {
+      "id": "log_demo_1774852635622_18_h8sb",
+      "action": "category_created",
+      "description": "Category \"Electronics\" created",
+      "userId": "user_demo",
+      "createdAt": "2026-03-29T12:37:15.622Z"
+    },
+    {
+      "id": "log_demo_1774852635622_17_t1i4",
+      "action": "order_status_updated",
+      "description": "Order ORD-1002 marked as Pending",
+      "userId": "user_demo",
+      "createdAt": "2026-03-29T13:37:15.622Z"
+    },
+    {
+      "id": "log_demo_1774852635622_16_3g6k",
+      "action": "order_status_updated",
+      "description": "Order ORD-1002 marked as Shipped",
+      "userId": "user_demo",
+      "createdAt": "2026-03-29T14:37:15.622Z"
+    },
+    {
+      "id": "log_demo_1774852635622_15_m6vm",
+      "action": "order_status_updated",
+      "description": "Order ORD-1002 marked as Cancelled",
+      "userId": "user_demo",
+      "createdAt": "2026-03-29T15:37:15.622Z"
+    },
+    {
+      "id": "log_demo_1774852635622_14_gfg8",
+      "action": "order_status_updated",
+      "description": "Order ORD-1003 marked as Pending",
+      "userId": "user_demo",
+      "createdAt": "2026-03-29T16:37:15.622Z"
+    },
+    {
+      "id": "log_demo_1774852635622_13_slgn",
+      "action": "stock_updated",
+      "description": "Stock updated for \"Denim Jeans\"",
+      "userId": "user_demo",
+      "createdAt": "2026-03-29T17:37:15.622Z"
+    },
+    {
+      "id": "log_demo_1774852635622_12_3uqf",
+      "action": "order_created",
+      "description": "Order ORD-1001 created for Alice Johnson",
+      "userId": "user_demo",
+      "createdAt": "2026-03-29T18:37:15.622Z"
+    },
+    {
+      "id": "log_demo_1774852635622_11_elxe",
+      "action": "restock_queue_added",
+      "description": "Product \"Backpack Urban 25L\" added to Restock Queue",
+      "userId": "user_demo",
+      "createdAt": "2026-03-29T19:37:15.622Z"
+    },
+    {
+      "id": "log_demo_1774852635622_10_dc7q",
+      "action": "product_restocked",
+      "description": "Product \"Wireless Mouse X2\" was restocked",
+      "userId": "user_demo",
+      "createdAt": "2026-03-29T20:37:15.622Z"
+    },
+    {
+      "id": "log_demo_1774852635622_9_259o",
+      "action": "product_updated",
+      "description": "Product \"iPhone 13\" updated",
+      "userId": "user_demo",
+      "createdAt": "2026-03-29T21:37:15.622Z"
+    },
+    {
+      "id": "log_demo_1774852635622_8_clr5",
+      "action": "order_created",
+      "description": "Order ORD-1004 created for David Lee",
+      "userId": "user_demo",
+      "createdAt": "2026-03-29T22:37:15.622Z"
+    },
+    {
+      "id": "log_demo_1774852635622_7_ytqx",
+      "action": "restock_queue_added",
+      "description": "Product \"LED Desk Lamp Pro\" added to Restock Queue",
+      "userId": "user_demo",
+      "createdAt": "2026-03-29T23:37:15.622Z"
+    },
+    {
+      "id": "log_demo_1774852635622_6_n8ww",
+      "action": "order_cancelled",
+      "description": "Order ORD-1002 cancelled by demo workflow",
+      "userId": "user_demo",
+      "createdAt": "2026-03-30T00:37:15.622Z"
+    },
+    {
+      "id": "log_demo_1774852635622_5_ho0h",
+      "action": "category_deleted",
+      "description": "Category \"Furniture\" deleted",
+      "userId": "user_demo",
+      "createdAt": "2026-03-30T01:37:15.622Z"
+    },
+    {
+      "id": "log_demo_1774852635622_4_twre",
+      "action": "product_updated",
+      "description": "Product \"Smart Watch Fit\" updated",
+      "userId": "user_demo",
+      "createdAt": "2026-03-30T02:37:15.622Z"
+    },
+    {
+      "id": "log_demo_1774852635622_3_5l3t",
+      "action": "order_created",
+      "description": "Order ORD-1002 created for Bob Smith",
+      "userId": "user_demo",
+      "createdAt": "2026-03-30T03:37:15.622Z"
+    },
+    {
+      "id": "log_demo_1774852635622_2_ampi",
+      "action": "category_created",
+      "description": "Category \"Furniture\" created",
+      "userId": "user_demo",
+      "createdAt": "2026-03-30T04:37:15.622Z"
+    },
+    {
+      "id": "log_demo_1774852635622_1_kjvq",
+      "action": "product_created",
+      "description": "Product \"Wireless Mouse X2\" created",
+      "userId": "user_demo",
+      "createdAt": "2026-03-30T05:37:15.622Z"
+    },
+    {
+      "id": "log_demo_1774852635622_0_gh60",
+      "action": "product_restocked",
+      "description": "Product \"Office Chair\" was restocked",
+      "userId": "user_demo",
+      "createdAt": "2026-03-30T06:37:15.621Z"
+    },
+    {
+      "id": "log_1774852381202_9_p",
+      "action": "product_created",
+      "description": "Product \"Noise Cancelling Earbuds\" created (demo seed)",
+      "userId": "user_demo",
+      "createdAt": "2026-03-30T06:33:01.202Z"
+    },
+    {
+      "id": "log_1774852381202_8_p",
+      "action": "product_created",
+      "description": "Product \"Backpack Urban 25L\" created (demo seed)",
+      "userId": "user_demo",
+      "createdAt": "2026-03-30T06:33:01.202Z"
+    },
+    {
+      "id": "log_1774852381202_7_p",
+      "action": "product_created",
+      "description": "Product \"Smart Watch Fit\" created (demo seed)",
+      "userId": "user_demo",
+      "createdAt": "2026-03-30T06:33:01.202Z"
+    },
+    {
+      "id": "log_1774852381202_7_q",
+      "action": "restock_queue_added",
+      "description": "Product \"Smart Watch Fit\" added to Restock Queue",
+      "userId": "user_demo",
+      "createdAt": "2026-03-30T06:33:01.202Z"
+    },
+    {
+      "id": "log_1774852381202_6_p",
+      "action": "product_created",
+      "description": "Product \"Yoga Mat Premium\" created (demo seed)",
+      "userId": "user_demo",
+      "createdAt": "2026-03-30T06:33:01.202Z"
+    },
+    {
+      "id": "log_1774852381202_6_q",
+      "action": "restock_queue_added",
+      "description": "Product \"Yoga Mat Premium\" added to Restock Queue",
+      "userId": "user_demo",
+      "createdAt": "2026-03-30T06:33:01.202Z"
+    },
+    {
+      "id": "log_1774852381202_5_p",
+      "action": "product_created",
+      "description": "Product \"Organic Coffee Beans\" created (demo seed)",
+      "userId": "user_demo",
+      "createdAt": "2026-03-30T06:33:01.202Z"
+    },
+    {
+      "id": "log_1774852381202_4_p",
+      "action": "product_created",
+      "description": "Product \"Stainless Water Bottle\" created (demo seed)",
+      "userId": "user_demo",
+      "createdAt": "2026-03-30T06:33:01.202Z"
+    },
+    {
+      "id": "log_1774852381202_3_p",
+      "action": "product_created",
+      "description": "Product \"LED Desk Lamp Pro\" created (demo seed)",
+      "userId": "user_demo",
+      "createdAt": "2026-03-30T06:33:01.202Z"
+    },
+    {
+      "id": "log_1774852381202_2_p",
+      "action": "product_created",
+      "description": "Product \"Bluetooth Speaker Mini\" created (demo seed)",
+      "userId": "user_demo",
+      "createdAt": "2026-03-30T06:33:01.202Z"
+    },
+    {
+      "id": "log_1774852381202_2_q",
+      "action": "restock_queue_added",
+      "description": "Product \"Bluetooth Speaker Mini\" added to Restock Queue",
+      "userId": "user_demo",
+      "createdAt": "2026-03-30T06:33:01.202Z"
+    },
+    {
+      "id": "log_1774852381202_1_p",
+      "action": "product_created",
+      "description": "Product \"Gaming Keyboard TKL\" created (demo seed)",
+      "userId": "user_demo",
+      "createdAt": "2026-03-30T06:33:01.202Z"
+    },
+    {
+      "id": "log_1774852381202_0_p",
+      "action": "product_created",
+      "description": "Product \"Wireless Mouse X2\" created (demo seed)",
+      "userId": "user_demo",
+      "createdAt": "2026-03-30T06:33:01.201Z"
+    },
+    {
+      "id": "log_001",
+      "action": "order_created",
+      "description": "Order ORD-1001 created by Demo User",
+      "userId": "user_demo",
+      "createdAt": "2026-03-22T09:00:00.000Z"
+    },
+    {
+      "id": "log_002",
+      "action": "order_created",
+      "description": "Order ORD-1002 created by Demo User",
+      "userId": "user_demo",
+      "createdAt": "2026-03-25T10:30:00.000Z"
+    },
+    {
+      "id": "log_003",
+      "action": "order_status_updated",
+      "description": "Order ORD-1002 marked as Shipped",
+      "userId": "user_demo",
+      "createdAt": "2026-03-26T08:00:00.000Z"
+    },
+    {
+      "id": "log_004",
+      "action": "restock_queue_added",
+      "description": "Product \"iPhone 13\" added to Restock Queue",
+      "userId": "user_demo",
+      "createdAt": "2026-03-20T00:00:00.000Z"
+    },
+    {
+      "id": "log_005",
+      "action": "order_created",
+      "description": "Order ORD-1004 created by Demo User",
+      "userId": "user_demo",
+      "createdAt": "2026-03-29T08:00:00.000Z"
+    }
+  ],
+  "meta": {
+    "orderCounter": 1004
+  }
+}

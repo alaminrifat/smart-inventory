@@ -1,36 +1,141 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Smart Inventory & Order Management
 
-## Getting Started
+Inventory and order operations dashboard built with Next.js App Router and TypeScript.
 
-First, run the development server:
+## Features
+
+### Authentication
+
+- Signup and login with email/password
+- JWT auth in HTTP-only cookies
+- Route protection via middleware
+
+### Product and Category Management
+
+- Create, update, and delete products
+- Create and delete categories
+- Product status tracking (`active`, `out_of_stock`)
+- Low-stock indicators and restock awareness
+
+### Order Management
+
+- Create multi-item orders
+- Order lifecycle: `pending`, `confirmed`, `shipped`, `delivered`, `cancelled`
+- Automatic stock deduction on order create
+- Stock restoration on cancellation
+
+### Conflict Detection
+
+- Prevent duplicate product entries in the same order
+- Prevent ordering unavailable products
+- Clear validation messages such as:
+  - `This product is already added to the order.`
+  - `"<product-name>" is currently unavailable.`
+
+### Restock Queue
+
+- Auto-add low-stock products to queue
+- Priority levels (`high`, `medium`, `low`)
+- Manual restock and queue removal actions
+
+### Dashboard and Activity
+
+- KPI cards for orders, pending count, low stock, and revenue
+- Revenue chart for recent trend
+- Activity feed with paginated Activity Log view
+
+### Quality of Life
+
+- Search/filter for products and orders
+- Pagination for products, orders, and activity logs
+
+## Tech Stack
+
+| Layer            | Technology                                       |
+| ---------------- | ------------------------------------------------ |
+| Framework        | Next.js 16 (App Router)                          |
+| Language         | TypeScript                                       |
+| UI               | Tailwind CSS v4, Base UI/shadcn-style components |
+| Forms/Validation | Formik, Zod                                      |
+| Client Data      | SWR                                              |
+| Local State      | Zustand                                          |
+| Auth             | jose, bcryptjs                                   |
+| Database         | MongoDB (`mongodb` driver)                       |
+| Charts           | Recharts                                         |
+
+## Setup
+
+### Prerequisites
+
+- Node.js 20+
+- npm
+- MongoDB Atlas (or any MongoDB URI)
+
+### 1. Install dependencies
+
+```bash
+cd smart-inventory
+npm install
+```
+
+### 2. Create `.env`
+
+Create a file named `.env` in the project root:
+
+```env
+JWT_SECRET=change-this-in-production
+MONGODB_URI=your-mongodb-connection-string
+MONGODB_DB_NAME=smart_inventory
+DB_PATH=./data/db.json
+PORT=3000
+```
+
+Notes:
+
+- `MONGODB_URI` is required for runtime persistence.
+- `DB_PATH` is used as legacy/local seed fallback data source.
+
+### 3. Run development server
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open http://localhost:3000
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Data and Seeding
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- The app stores runtime data in MongoDB collection `app_state` as a singleton document (`_id: "singleton"`).
+- On first read, if Mongo has no app document yet, it seeds from `data/db.json`.
+- You can also manually reseed by writing `data/db.json` into Mongo (as done during setup tasks).
 
-## Learn More
+## Build and Run
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+npm run build
+npm run start
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Deployment Notes
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- Configure `JWT_SECRET`, `MONGODB_URI`, and `MONGODB_DB_NAME` in your hosting environment.
+- For MongoDB Atlas, whitelist your deployment/server IP(s) in Atlas Network Access.
+- Avoid `0.0.0.0/0` outside temporary development use.
 
-## Deploy on Vercel
+## Project Structure
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```text
+src/
+   app/
+      (auth)/
+      (app)/
+      api/
+   components/
+   hooks/
+   lib/
+   store/
+   types/
+data/
+   db.json
+middleware.ts
+```
